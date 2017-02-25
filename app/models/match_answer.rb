@@ -11,15 +11,18 @@
 #
 # Indexes
 #
-#  index_match_answers_on_answer_id  (answer_id)
-#  index_match_answers_on_match_id   (match_id)
-#  index_match_answers_on_team_id    (team_id)
+#  index_match_answers_on_answer_id             (answer_id)
+#  index_match_answers_on_match_id              (match_id)
+#  index_match_answers_on_match_id_and_team_id  (match_id,team_id) UNIQUE
+#  index_match_answers_on_team_id               (team_id)
 #
 
 class MatchAnswer < ApplicationRecord
   validates :answer, presence: true
   validates :match, presence: true
   validates :team, presence: true
+
+  validates :match, uniqueness: { scope: [:team] }
 
   belongs_to :answer
   belongs_to :match
