@@ -2,12 +2,17 @@ class BaseService
   include ActiveSupport::Rescuable
 
   rescue_from ActiveRecord::RecordInvalid, with: :handle_record_invalid
+  rescue_from ActiveRecord::RecordNotUnique, with: :handle_record_not_unique
   rescue_from ActiveRecord::AssociationTypeMismatch, with: :handle_record_invalid
 
   protected
 
   def handle_record_invalid(exception)
     raise Errors::RecordInvalidError.new(exception)
+  end
+
+  def handle_record_not_unique(exception)
+    raise Errors::RecordNotUnique.new(exception)
   end
 
   # Populates hash

@@ -12,7 +12,7 @@ class Users::UpdateService < BaseService
     begin
       user.update_attributes!(build_edit_attributes)
       return user
-    rescue Exception => exception
+    rescue StandardError => exception
       rescue_with_handler(exception) || raise
     end
   end

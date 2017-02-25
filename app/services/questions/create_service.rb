@@ -20,7 +20,7 @@ module Questions
 
           new_question
         end
-      rescue Exception => exception
+      rescue StandardError => exception
         rescue_with_handler(exception) || raise
       end
     end
