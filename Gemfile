@@ -42,6 +42,7 @@ group :development do
   gem 'capistrano-thin', '~> 1.2.0'
   gem 'guard-shell', '~> 0.7.1'
   gem 'rails_layout'
+  gem 'rubocop', require: false
   gem 'spring-commands-rspec'
   gem 'thor', '0.19.1'
   gem 'web-console', '~> 2.0'
