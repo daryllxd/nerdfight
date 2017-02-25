@@ -30,7 +30,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
 end
 
 group :development do
@@ -44,6 +43,8 @@ group :development do
   gem 'guard-shell', '~> 0.7.1'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
+  gem 'thor', '0.19.1'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
