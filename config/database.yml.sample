@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: nerdfight_development
+  pool: 5
+  username: daryllxd
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: nerdfight_test
+  username: daryllxd
+  pool: 5
+  host: localhost
+  port: 5432
