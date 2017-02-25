@@ -17,6 +17,10 @@
 #
 
 class MatchAnswer < ApplicationRecord
+  validates :answer, presence: true
+  validates :match, presence: true
+  validates :team, presence: true
+
   belongs_to :answer
   belongs_to :match
   belongs_to :team

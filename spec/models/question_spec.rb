@@ -12,9 +12,9 @@ RSpec.describe Question, type: :model do
     it 'gets the correct answer' do
       question = create(:question, question_text: 'What is the capital of the Philippines?')
 
-      answer1 = create(:answer, name: 'Manila')
-      answer2 = create(:answer, name: 'Davao')
-      answer3 = create(:answer, name: 'Cebu')
+      answer1 = create(:answer, question: question, name: 'Manila')
+      answer2 = create(:answer, question: question, name: 'Davao')
+      answer3 = create(:answer, question: question, name: 'Cebu')
 
       question.set_correct_answer_as(answer1)
       expect(question.correct_answer).to eq answer1

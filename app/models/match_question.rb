@@ -15,6 +15,9 @@
 #
 
 class MatchQuestion < ApplicationRecord
+  validates :match, presence: true
+  validates :question, presence: true
+
   belongs_to :match
   belongs_to :question
 end
