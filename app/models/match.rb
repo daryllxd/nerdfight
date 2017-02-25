@@ -12,4 +12,8 @@ class Match < ApplicationRecord
   has_many :match_questions
   has_many :questions, through: :match_questions
   has_many :teams
+
+  def add_question(question)
+    match_questions.create(question: question)
+  end
 end
