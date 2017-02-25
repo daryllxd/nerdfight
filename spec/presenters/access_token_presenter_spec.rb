@@ -1,4 +1,4 @@
-describe AccessTokenPresenter do
+RSpec.describe AccessTokenPresenter do
   it {should be_a_kind_of(BasePresenter) }
 
   it 'returns the token_value and device_id' do

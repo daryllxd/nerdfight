@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Users::UpdateService do
+RSpec.describe Users::UpdateService do
   context 'inheritance' do
     subject { Users::UpdateService.new(user: 1, attributes: 2) }
 

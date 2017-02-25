@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Questions::CreateService do
+RSpec.describe Questions::CreateService do
   let!(:execute) { proc { |params| described_class.new(params).call } }
 
   context 'successful' do

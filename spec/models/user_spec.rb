@@ -32,7 +32,7 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 
-describe User, type: :model do
+RSpec.describe User, type: :model do
   describe 'relationships' do
     it { should belong_to(:team) }
 

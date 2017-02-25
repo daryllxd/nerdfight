@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::SessionsController do
+RSpec.describe Api::V1::SessionsController do
   describe 'POST #destroy' do
     context 'successful' do
       it 'destroys the token and returns a success true' do

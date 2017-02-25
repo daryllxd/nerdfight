@@ -1,4 +1,4 @@
-describe UserPresenter do
+RSpec.describe UserPresenter do
   it { should be_a(BasePresenter) }
 
   it 'returns user details' do

@@ -1,4 +1,4 @@
-describe NewUser do
+RSpec.describe NewUser do
   subject { NewUser.new(user: 1, access_token: 2) }
 
   it { should be_valid }

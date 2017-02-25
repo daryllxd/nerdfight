@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::UsersController do
+RSpec.describe Api::V1::UsersController do
   describe 'POST #create' do
     context 'successful' do
       it 'returns a user_id and an access token with device_id and token_value' do

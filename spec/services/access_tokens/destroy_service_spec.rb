@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe AccessTokens::DestroyService do
+RSpec.describe AccessTokens::DestroyService do
   let!(:access_token) { create(:access_token) }
 
   context 'successful' do

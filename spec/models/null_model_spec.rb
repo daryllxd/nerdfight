@@ -1,4 +1,4 @@
-describe NullModel do
+RSpec.describe NullModel do
   it 'properties' do
     null_model = NullModel.new
 

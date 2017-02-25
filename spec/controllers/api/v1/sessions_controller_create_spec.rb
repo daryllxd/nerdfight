@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::SessionsController do
+RSpec.describe Api::V1::SessionsController do
   describe 'POST #create' do
     let!(:existing_user) { create(:user, password: 'SWAGLORD') }
 

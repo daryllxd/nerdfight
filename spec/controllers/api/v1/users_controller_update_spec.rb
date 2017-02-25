@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::UsersController do
+RSpec.describe Api::V1::UsersController do
   describe 'PUT #update' do
     let!(:existing_user) { create(:user) }
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Users::CreateService do
+RSpec.describe Users::CreateService do
   context 'successful' do
     it 'creates a user and returns the user attributes and its corresponding access_token' do
       new_user_attributes = {

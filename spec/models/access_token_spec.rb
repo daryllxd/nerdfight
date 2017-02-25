@@ -13,7 +13,7 @@
 #  index_access_tokens_on_user_id  (user_id)
 #
 
-describe AccessToken, type: :model do
+RSpec.describe AccessToken, type: :model do
   it { should belong_to(:user) }
   it { should validate_presence_of(:encrypted_token_value) }
   it { should validate_presence_of(:device_id) }
