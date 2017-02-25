@@ -12,10 +12,10 @@
 class Question < ApplicationRecord
   validates :question_text, presence: true
 
-  has_one :correct_answer, class_name: Answer
+  belongs_to :correct_answer, class_name: Answer
   has_many :answers
 
   def set_correct_answer_as(answer)
-    update_attributes(correct_answer: answer1)
+    update_attributes(correct_answer: answer)
   end
 end

@@ -9,5 +9,7 @@
 #
 
 class Match < ApplicationRecord
+  has_many :match_questions
+  has_many :questions, through: :match_questions
   has_many :teams
 end
