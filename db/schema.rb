@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225142811) do
+ActiveRecord::Schema.define(version: 20170306195331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,11 +37,14 @@ ActiveRecord::Schema.define(version: 20170225142811) do
     t.integer  "answer_id"
     t.integer  "match_id"
     t.integer  "team_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "match_question_id"
+    t.boolean  "is_correct",        default: false, null: false
     t.index ["answer_id"], name: "index_match_answers_on_answer_id", using: :btree
     t.index ["match_id", "team_id"], name: "index_match_answers_on_match_id_and_team_id", unique: true, using: :btree
     t.index ["match_id"], name: "index_match_answers_on_match_id", using: :btree
+    t.index ["match_question_id"], name: "index_match_answers_on_match_question_id", using: :btree
     t.index ["team_id"], name: "index_match_answers_on_team_id", using: :btree
   end
 
