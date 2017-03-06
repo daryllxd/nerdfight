@@ -26,6 +26,7 @@ gem 'thin'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'rb-readline'
   gem 'spring'
 end
 
