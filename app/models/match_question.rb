@@ -7,6 +7,7 @@
 #  question_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  point_value :integer          default(0), not null
 #
 # Indexes
 #
@@ -16,6 +17,7 @@
 
 class MatchQuestion < ApplicationRecord
   validates :match, presence: true
+  validates :point_value, numericality: true
   validates :question, presence: true
 
   belongs_to :match

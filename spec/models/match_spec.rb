@@ -18,4 +18,16 @@ RSpec.describe Match, type: :model do
       expect(match.questions).to include question
     end
   end
+
+  describe '#set_point_value_for and #point_value_for' do
+    it 'works' do
+      match = create(:match)
+      question = build(:question)
+      match.add_question(question)
+
+      match.set_point_value_for(question: question, point_value: 5)
+
+      expect(match.point_value_for(question: question)).to eq 5
+    end
+  end
 end
