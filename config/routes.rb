@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resource :users, only: %i{create update}
+      resources :teams, only: %i{index}
       resources :contacts, only: %i{create index}  do
         collection { post :check }
       end
