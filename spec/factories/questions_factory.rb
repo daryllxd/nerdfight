@@ -4,8 +4,9 @@ FactoryGirl.define do
 
     trait :with_answers do
       after(:create) do |question|
-        wrong_answer = create(:answer, question: question)
-        right_answer = create(:answer, question: question)
+        wrong_answer = create(:answer, question: question, name: 'wrong')
+        right_answer = create(:answer, question: question, name: 'right')
+        question.set_correct_answer_as(right_answer)
       end
     end
   end
